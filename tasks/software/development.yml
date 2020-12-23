@@ -14,7 +14,7 @@
 - name: git | Setup default git configuraiton
   git_config:
     name="{{ item.name }}"
-    scope=global
+    scope=system
     value="{{ item.value }}"
   with_items:
     - {name: "user.name",  value: "RedfinDiver" }
