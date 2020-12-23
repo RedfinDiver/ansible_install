@@ -1,1 +1,1 @@
-/home/markus/NAS    /etc/autofs/auto.synology --ghost
+/test/NAS /etc/autofs/auto.synology --timeout=120 --ghost
