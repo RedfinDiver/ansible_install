@@ -8,6 +8,7 @@
   user:
     name: markus
     comment: Markus Moser
+    password: $6$leon$CBvtw.Jolgn0Io/GzwADlQ6YCxUJVoaHV9lI6Stv7eKc9pNkclut9514MO4PRkl63yNqkQ10QvT.MrKQWnuF.0
     uid: 1028
     group: nfs
     groups: wheel
