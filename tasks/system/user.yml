@@ -1,0 +1,12 @@
+- name: user | add new group for nfs on nas
+  group:
+    gid: 100
+    name: nfs
+    state: present
+
+- name: user | create my user with certain groups
+  user:
+    name: markus
+    comment: Markus Moser
+    uid: 1028
+    group: nfs
