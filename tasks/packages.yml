@@ -1,4 +1,4 @@
-- name: install packages
+- name: packages | install
   package:
     name:
       - htop

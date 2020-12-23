@@ -5,7 +5,7 @@
 
 - name: autofs | copy auto.master
   copy:
-    src: files/auotfs/auto.master
+    src: files/autofs/auto.master
     dest: /etc/autofs/auto.master
     owner: root
     group: root
