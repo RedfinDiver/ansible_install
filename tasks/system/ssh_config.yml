@@ -17,7 +17,7 @@
 - name: ssh configuration | copy hosts file
   copy:
     src: files/ssh_config/hosts
-    dest: /home/test/.ssh/hosts
+    dest: /etc/hosts
     owner: root
     group: root
     mode: '0644'
