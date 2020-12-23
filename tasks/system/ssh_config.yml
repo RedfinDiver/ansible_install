@@ -1,6 +1,6 @@
 - name: ssh configuration | create .ssh directory
   file:
-    path: /home/test/.ssh
+    path: /home/markus/.ssh
     state: directory
     owner: test
     group: test
@@ -9,7 +9,7 @@
 - name: ssh configuration | copy config file
   copy:
     src: files/ssh_config/config
-    dest: /home/test/.ssh/config
+    dest: /home/markus/.ssh/config
     owner: test
     group: test
     mode: '0644'

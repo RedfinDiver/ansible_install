@@ -1,7 +1,6 @@
-- name: autofs | create mountpoint
-  file:
-    path: /home/test/NAS
-    state: directory
+- name: autofs | install
+  package:
+    name: autofs
 
 - name: autofs | copy auto.master
   copy:

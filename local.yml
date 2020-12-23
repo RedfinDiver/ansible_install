@@ -3,15 +3,15 @@
   connection: local
   become: true
 
-  # pre_tasks:
-  #   - name: update repos
-  #     pacman:
-  #       update_cache: yes
-  #       upgrade: yes
-  #     changed_when: False
+  pre_tasks:
+    - name: update repos
+      pacman:
+        update_cache: yes
+        upgrade: yes
+      changed_when: False
 
   tasks:
+    - include: tasks/system/user_markus.yml
     - include: tasks/software/packages.yml
     - include: tasks/system/autofs.yml
     - include: tasks/system/ssh_config.yml
-    - include: tasks/system/user_markus.yml
