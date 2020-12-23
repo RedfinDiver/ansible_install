@@ -12,7 +12,7 @@
 #     name: pipenv
 
 - name: git | Setup default git configuraiton
-  become: markus
+  become_user: markus
   git_config:
     name="{{ item.name }}"
     scope=global
