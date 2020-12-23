@@ -31,6 +31,7 @@
     - { dir: Vorlagen }
     - { dir: Projekte }
     - { dir: Öffentlich }
+    - { dir: .ansible/tmp }
 
 - name: user | markus | copy user-dirs.dirs
   copy:
