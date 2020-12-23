@@ -1,0 +1,6 @@
+- name: ssh configuration | copy config file
+  copy:
+    src: files/ssh_config/config
+    dest: /home/test/.ssh/config
+    owner: test
+    group: test
