@@ -3,12 +3,12 @@
   connection: local
   become: true
 
-  pre_tasks:
-    - name: update repos
-      pacman:
-        update_cache: yes
-        upgrade: yes
-      changed_when: False
+  # pre_tasks:
+  #   - name: update repos
+  #     pacman:
+  #       update_cache: yes
+  #       upgrade: yes
+  #     changed_when: False
 
   tasks:
     - include: tasks/software/packages.yml

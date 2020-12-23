@@ -13,3 +13,11 @@
     owner: test
     group: test
     mode: '0644'
+
+- name: ssh configuration | copy hosts file
+  copy:
+    src: files/ssh_config/hosts
+    dest: /home/test/.ssh/hosts
+    owner: root
+    group: root
+    mode: '0644'
