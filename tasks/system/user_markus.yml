@@ -12,7 +12,7 @@
     group: nfs
     groups: wheel
 
-- name: users | markus | create personal directories
+- name: user | markus | create personal directories
   file:
     path: /home/markus/{{ item.dir }}
     state: directory
@@ -31,7 +31,7 @@
     - { dir: Projekte }
     - { dir: Öffentlich }
 
-- name: users | markus | copy user-dirs.dirs
+- name: user | markus | copy user-dirs.dirs
   copy:
     src: files/user/user-dirs.dirs
     dest: /home/markus/.config/user-dirs.dirs
@@ -39,3 +39,8 @@
     group: nfs
     mode: 0600
   notify: update_xdg
+
+handlers:
+  - name: update_xdg
+    become_user: markus
+    command: /usr/bin/xdg-user-dirs-update
