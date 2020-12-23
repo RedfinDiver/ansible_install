@@ -12,9 +12,10 @@
 #     name: pipenv
 
 - name: git | Setup default git configuraiton
+  become: markus
   git_config:
     name="{{ item.name }}"
-    scope=system
+    scope=global
     value="{{ item.value }}"
   with_items:
     - {name: "user.name",  value: "RedfinDiver" }
