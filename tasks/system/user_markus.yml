@@ -1,0 +1,41 @@
+- name: user | markus| add new group for nfs on nas
+  group:
+    gid: 100
+    name: nfs
+    state: present
+
+- name: user | markus | create my user with certain groups
+  user:
+    name: markus
+    comment: Markus Moser
+    uid: 1028
+    group: nfs
+    groups: wheel
+
+- name: users | markus | create personal directories
+  file:
+    path: /home/markus/{{ item.dir }}
+    state: directory
+    owner: markus
+    group: nfs
+    mode: 0700
+  with_items:
+    - { dir: Schreibtisch }
+    - { dir: Dokumente }
+    - { dir: Downloads }
+    - { dir: Musik }
+    - { dir: Bilder }
+    - { dir: NAS }
+    - { dir: Videos }
+    - { dir: Vorlagen }
+    - { dir: Projekte }
+    - { dir: Öffentlich }
+
+- name: users | markus | copy user-dirs.dirs
+  copy:
+    src: file/user/user-dirs.dirs
+    dest: /home/markus/.config/user-dirs.dirs
+    owner: markus
+    group: nfs
+    mode: 0600
+  notify: update_xdg
