@@ -38,9 +38,7 @@
     owner: markus
     group: nfs
     mode: 0600
-  notify: update_xdg
 
-handlers:
-  - name: update_xdg
-    become_user: markus
-    command: /usr/bin/xdg-user-dirs-update
+- name: update_xdg
+  become_user: markus
+  command: /usr/bin/xdg-user-dirs-update
