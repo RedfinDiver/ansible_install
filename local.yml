@@ -9,3 +9,17 @@
       name:
         - htop
         - autofs
+
+  - name: copy autofs auto.master
+    copy:
+      src: files/auto.master
+      dest: /etc/autofs/auto.master
+      owner: root
+      group: root
+
+  - name: copy autofs auto.synology
+    copy:
+      src: files/auto.synology
+      dest: /etc/autofs/auto.synology
+      owner: root
+      group: root

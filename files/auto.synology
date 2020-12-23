@@ -1,0 +1,5 @@
+markus -fstype=nfs,rw,retry=0 192.168.178.20:/volume1/homes/markus
+share  -fstype=nfs,rw,retry=0 192.168.178.20:/volume1/share
+docker -fstype=nfs,rw,retry=0 192.168.178.20:/volume1/docker
+ebooks -fstype=nfs,rw,retry=0 192.168.178.20:/volume1/ebooks
+web    -fstype=nfs,rw,retry=0 192.168.178.20:/volume1/web
