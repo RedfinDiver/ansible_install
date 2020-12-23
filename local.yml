@@ -12,4 +12,4 @@
 
   tasks:
     - include: tasks/packages.yml
-    - include: task/autofs.yml
+    - include: tasks/autofs.yml
