@@ -1,0 +1,25 @@
+- name: autofs | create mountpoint
+  file:
+    path: /home/test/NAS
+    state: directory
+
+- name: autofs | copy auto.master
+  copy:
+    src: files/auotfs/auto.master
+    dest: /etc/autofs/auto.master
+    owner: root
+    group: root
+
+- name: autofs | copy auto.synology
+  copy:
+    src: files/autofs/auto.synology
+    dest: /etc/autofs/auto.synology
+    owner: root
+    group: root
+
+- name: autofs | start and enable daemon
+  tags: autofs
+  service:
+    name: autofs
+    state: started
+    enabled: true
