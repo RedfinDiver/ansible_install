@@ -5,3 +5,6 @@
 - block:
   # Make sure users exist on the system
   - import_tasks: users/markus.yml
+
+  # Basic setups for ssh
+  - import_tasks: system/ssh.yml

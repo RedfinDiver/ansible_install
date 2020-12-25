@@ -8,7 +8,7 @@
 
 - name: ssh configuration | copy config file
   copy:
-    src: files/ssh_config/config
+    src: files/ssh/config
     dest: /home/markus/.ssh/config
     owner: test
     group: test
@@ -16,7 +16,7 @@
 
 - name: ssh configuration | copy hosts file
   copy:
-    src: files/ssh_config/hosts
+    src: files/ssh/hosts
     dest: /etc/hosts
     owner: root
     group: root
