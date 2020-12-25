@@ -11,7 +11,7 @@
   pip:
     name: pipenv
 
-- name: git | Setup default git configuraiton
+- name: git | Setup default git configuration
   become_user   : markus
   git_config:
     name="{{ item.name }}"
