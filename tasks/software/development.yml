@@ -1,18 +1,18 @@
-# - name: development | install
-#   package:
-#     name:
-#       - code
-#       - ant
-#       - docker
-#       - docker-compose
-#       - python-pip
+- name: development | install
+  package:
+    name:
+      - code
+      - ant
+      - docker
+      - docker-compose
+      - python-pip
 
-# - name: python | configure
-#   pip:
-#     name: pipenv
+- name: python | configure
+  pip:
+    name: pipenv
 
 - name: git | Setup default git configuraiton
-  become_user: markus
+  become_user   : markus
   git_config:
     name="{{ item.name }}"
     scope=global
