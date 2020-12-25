@@ -6,5 +6,6 @@
   # Make sure users exist on the system
   - import_tasks: users/markus.yml
 
-  # Basic setups for ssh
+  # Other system setup stuff
   - import_tasks: system/ssh.yml
+  - import_tasks: system/autofs.yml

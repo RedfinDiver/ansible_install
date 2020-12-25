@@ -4,14 +4,14 @@
 
 - name: autofs | copy auto.master
   copy:
-    src: files/autofs/auto.master
+    src: autofs/auto.master
     dest: /etc/autofs/auto.master
     owner: root
     group: root
 
 - name: autofs | copy auto.synology
   copy:
-    src: files/autofs/auto.synology
+    src: autofs/auto.synology
     dest: /etc/autofs/auto.synology
     owner: root
     group: root
