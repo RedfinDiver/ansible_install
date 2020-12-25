@@ -9,3 +9,6 @@
   # Other system setup stuff
   - import_tasks: system/ssh.yml
   - import_tasks: system/autofs.yml
+
+  # Install Software Tools
+  - import_tasks: software/development.yml
