@@ -3,7 +3,7 @@
     name: code
 
 - name: vscode | install extensions
-  shell: code --install-extensions {{ item.ext }}
+  shell: "code --install-extensions {{ item.ext }}"
   with_items:
     - { ext: MS-CEINTL.vscode-language-pack-de }
     - { ext: ms-python.python }
