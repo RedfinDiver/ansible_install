@@ -3,18 +3,18 @@
     name: code
 
 - name: vscode | install extensions
-  shell: "code --install-extensions {{ item.ext }}"
-  with_items:
-    - { ext: MS-CEINTL.vscode-language-pack-de }
-    - { ext: ms-python.python }
-    - { ext: bmewburn.vscode-intelephense-client }
-    - { ext: felixfbecker.php-debug }
-    - { ext: formulahendry.code-runner }
-    - { ext: alefragnani.project-manager }
-    - { ext: Gruntfuggly.todo-tree }
-    - { ext: nickheap.vscode-ant }
-    - { ext: ms-azuretools.vscode-docker }
-    - { ext: lextudio.restructuredtext }
-    - { ext: ziishaned.livereload }
-    - { ext: skyapps.fish-vscode }
-    - { ext: mikestead.dotenv }
+  comand: "{{ item }}"
+  loop:
+    - code --install-extension MS-CEINTL.vscode-language-pack-de
+    - code --install-extension ms-python.python
+    - code --install-extension bmewburn.vscode-intelephense-client
+    - code --install-extension felixfbecker.php-debug
+    - code --install-extension formulahendry.code-runner
+    - code --install-extension alefragnani.project-manager
+    - code --install-extension Gruntfuggly.todo-tree
+    - code --install-extension nickheap.vscode-ant
+    - code --install-extension ms-azuretools.vscode-docker
+    - code --install-extension lextudio.restructuredtext
+    - code --install-extension ziishaned.livereload
+    - code --install-extension skyapps.fish-vscode
+    - code --install-extension mikestead.dotenv
