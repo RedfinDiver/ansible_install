@@ -35,7 +35,7 @@
 
 - name: user | markus | copy user-dirs.dirs
   copy:
-    src: users/markus/user-dirs.dirs
+    src: user/user-dirs.dirs
     dest: /home/markus/.config/user-dirs.dirs
     owner: markus
     group: nfs
