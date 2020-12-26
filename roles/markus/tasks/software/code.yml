@@ -6,15 +6,15 @@
   shell: code --install-extensions {{ item.ext }}
   with_items:
     - { ext: MS-CEINTL.vscode-language-pack-de }
-    - { ms-python.python }
-    - { bmewburn.vscode-intelephense-client }
-    - { felixfbecker.php-debug }
-    - { formulahendry.code-runner }
-    - { alefragnani.project-manager }
-    - { Gruntfuggly.todo-tree }
-    - { nickheap.vscode-ant }
-    - { ms-azuretools.vscode-docker }
-    - { lextudio.restructuredtext }
-    - { ziishaned.livereload }
-    - { skyapps.fish-vscode }
-    - { mikestead.dotenv }
+    - { ext: ms-python.python }
+    - { ext: bmewburn.vscode-intelephense-client }
+    - { ext: felixfbecker.php-debug }
+    - { ext: formulahendry.code-runner }
+    - { ext: alefragnani.project-manager }
+    - { ext: Gruntfuggly.todo-tree }
+    - { ext: nickheap.vscode-ant }
+    - { ext: ms-azuretools.vscode-docker }
+    - { ext: lextudio.restructuredtext }
+    - { ext: ziishaned.livereload }
+    - { ext: skyapps.fish-vscode }
+    - { ext: mikestead.dotenv }
