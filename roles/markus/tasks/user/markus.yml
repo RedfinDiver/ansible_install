@@ -40,4 +40,4 @@
     owner: markus
     group: nfs
     mode: '0600'
-  notify: update-xdg
+  notify: update_xdg

@@ -4,11 +4,11 @@
 
 - block:
   # Make sure users exist on the system
-  - import_tasks: users/markus.yml
+  - import_tasks: user/markus.yml
 
   # Other system setup stuff
   - import_tasks: system/ssh.yml
   - import_tasks: system/autofs.yml
 
   # Install Software Tools
-  - import_tasks: software/development.yml
+  - import_tasks: software/code.yml

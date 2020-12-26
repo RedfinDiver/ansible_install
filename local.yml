@@ -12,8 +12,8 @@
       when: ansible_distribution == "Archlinux"
 
 # run roles
-- hosts: all
+- hosts: markus
   tags: base
   become: true
   roles:
-    - base
+    - markus

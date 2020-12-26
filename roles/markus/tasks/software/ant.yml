@@ -1,0 +1,27 @@
+---
+- name: ant | install
+  package:
+    name: ant
+
+- name: ant | create directory for more ant libs
+  file:
+    path: /usr/share/java/apache-ant
+    state: directory
+    owner: root
+    group: root
+    mode: '0751'
+
+- name: ant | add ant libs
+  copy:
+    src: ant/{{ item }}
+    dest: /usr/share/java/apache-ant
+    owner: root
+    group: root
+    mode: '0444'
+  with_items:
+    - ant-contrib.jar
+    - xmltask.jar
+
+- name: ant | set java version
+  become: yes
+  command: archlinux-java set java-14-openjdk
