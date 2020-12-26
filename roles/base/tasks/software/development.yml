@@ -23,4 +23,4 @@
   
 - name: ant | install apache-ant-contrib
   become: yes
-  command: /usr/bin/pamac build apache-ant-contrib
+  command: /usr/bin/pamac build apache-ant-contrib  --noconfirm 
