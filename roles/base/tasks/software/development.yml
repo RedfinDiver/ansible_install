@@ -30,13 +30,15 @@
     mode: '0751'
 
 - name: ant | add ant libs
-  copy: src=ant/{{ item }} dest=/usr/share/java/apache-ant
-  owner: root
-  group: root
-  mode: '0444'
-  with_items:
-    - ant-contrib.jar
-    - xmltask.jar
+  copy:
+    - src=ant/{{ item }}
+    - dest=/usr/share/java/apache-ant
+    owner: root
+    group: root
+    mode: '0444'
+    with_items:
+      - ant-contrib.jar
+      - xmltask.jar
 
 - name: ant | set java version
   become: yes
