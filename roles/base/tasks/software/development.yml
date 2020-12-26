@@ -31,8 +31,8 @@
 
 - name: ant | add ant libs
   copy:
-    - src: ant/{{ item }}
-    - dest: /usr/share/java/apache-ant
+    src: ant/{{ item }}
+    dest: /usr/share/java/apache-ant
     owner: root
     group: root
     mode: '0444'
