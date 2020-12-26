@@ -36,9 +36,9 @@
     owner: root
     group: root
     mode: '0444'
-    with_items:
-      - ant-contrib.jar
-      - xmltask.jar
+  with_items:
+    - ant-contrib.jar
+    - xmltask.jar
 
 - name: ant | set java version
   become: yes
