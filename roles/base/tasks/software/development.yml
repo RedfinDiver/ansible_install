@@ -38,12 +38,6 @@
     - ant-contrib.jar
     - xmltask.jar
 
-- name: ant | install xml-task.jar
-  get_url:
-    url: https://sourceforge.net/projects/xmltask/files/xmltask/1.16/xmltask.jar
-    dest: /usr/share/java/apache-ant/xmltask.jar
-    mode: '0644'
-
 - name: ant | set java version
   become: yes
   command: archlinux-java set java-14-openjdk
