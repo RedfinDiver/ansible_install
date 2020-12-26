@@ -12,7 +12,7 @@
     name: pipenv
 
 - name: git | Setup default git configuration
-  become_user   : markus
+  become_user: markus
   git_config:
     name="{{ item.name }}"
     scope=global
@@ -21,3 +21,6 @@
     - {name: "user.name",  value: "RedfinDiver" }
     - {name: "user.email", value: "redfindiver@gmail.com" }
   
+- name: ant | install apache-ant-contrib
+  become: yes
+  command: /usr/bin/pamac build apache-ant-contrib
