@@ -2,7 +2,12 @@
   package:
     name: code
 
+- name: vscode | set directory for extensions
+  become_user: markus
+  command: code --extensions-dir /home/markus/.vscode-oss/extensions
+
 - name: vscode | install extensions
+  become_user: markus
   command: "{{ item }}"
   loop:
     - code --install-extension MS-CEINTL.vscode-language-pack-de
