@@ -20,10 +20,23 @@
   with_items:
     - {name: "user.name",  value: "RedfinDiver" }
     - {name: "user.email", value: "redfindiver@gmail.com" }
-  
-- name: ant | install apache-ant-contrib
-  become: yes
-  command: /usr/bin/pamac build apache-ant-contrib  --noconfirm 
+
+- name: ant | create directory for more ant libs
+  file:
+    path: /usr/share/java/apache-ant
+    state: directory
+    owner: root
+    group: root
+    mode: '0751'
+
+- name: ant | add ant libs
+  copy: src=ant/{{ item }} dest=/usr/share/java/apache-ant
+  owner: root
+  group: root
+  mode: '0444'
+  with_items:
+    - ant-contrib.jar
+    - xmltask.jar
 
 - name: ant | install xml-task.jar
   get_url:
@@ -33,5 +46,5 @@
 
 - name: ant | set java version
   become: yes
-  command: archlinux-java set java-13-openjdk
+  command: archlinux-java set java-14-openjdk
   
