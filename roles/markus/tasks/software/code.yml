@@ -3,7 +3,7 @@
     name: code
 
 - name: vscode | install extensions
-  comand: "{{ item }}"
+  command: "{{ item }}"
   loop:
     - code --install-extension MS-CEINTL.vscode-language-pack-de
     - code --install-extension ms-python.python
