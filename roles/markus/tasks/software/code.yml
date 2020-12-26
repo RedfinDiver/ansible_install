@@ -1,5 +1,6 @@
 - name: vscode | install
-  package: code
+  package:
+    name: code
 
 - name: vscode | install extensions
   shell: code --install-extensions {{ item.ext }}
