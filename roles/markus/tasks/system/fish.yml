@@ -30,6 +30,7 @@
 - name: fish | set shell for user markus
   become: yes
   user:
+    append: yes
     name: markus
     shell: fish
 
