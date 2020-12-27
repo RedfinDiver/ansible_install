@@ -10,7 +10,6 @@
     comment: Markus Moser
     password: $6$kjhbjhgjhd8$BMGCfP2rKyJucSh3TiWMkg/S0ZoA7FRGP19j2y2LotNNUmU2EuLF74t/qaS69wf0Xha7PrjdLqbz1mnuY/irW1
     create_home: yes
-    shell: fish
     uid: 1028
     group: nfs
     groups: wheel
