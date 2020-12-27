@@ -1,0 +1,13 @@
+---
+- name: flatpak | install
+  package:
+    name: flatpak
+    state: present
+
+- name: flatpak | add flathub remote
+  become_user: markus
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    method: user
+    state: present

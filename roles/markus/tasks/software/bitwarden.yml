@@ -1,0 +1,6 @@
+- name: bitwarden | install package
+  become_user: markus
+  flatpak:
+    name: flathub com.bitwarden.desktop
+    method: user
+    state: present

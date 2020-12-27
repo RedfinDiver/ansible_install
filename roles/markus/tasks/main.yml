@@ -8,6 +8,7 @@
   - import_tasks: system/autofs.yml
   - import_tasks: system/htop.yml
   - import_tasks: system/fish.yml
+  - import_tasks: system/flatpak.yml
 
   # Install and configure Development tools
   - import_tasks: development/code.yml
@@ -15,7 +16,9 @@
   - import_tasks: development/git.yml
   - import_tasks: development/python.yml
 
-  # Install and configure other software
+  # Install and configure gnome
   - import_tasks: gnome/appearance.yml
   - import_tasks: gnome/keybindings.yml
 
+  # Install and configure other software
+  - import_tasks: software/bitwarden.yml
