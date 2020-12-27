@@ -11,8 +11,7 @@
     update: yes
 
 - name: fish | set shell for user markus
-  become: true
-  shell: chsh /usr/bin/fish markus
+  shell: chsh -s /usr/bin/fish markus
 
 # - name: fish | set simple-ass-prompt
 #   become: true
