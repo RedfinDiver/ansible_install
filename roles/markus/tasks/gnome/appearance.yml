@@ -1,0 +1,71 @@
+---
+- name: gnome | appearance | install requirements for theme
+  package:
+    - gtk-engine-murrine
+    - gtk-engines
+    - sassc
+  state: present
+
+- name: gnome | appearance | clone Mojave theme repo
+  git:
+    repo: https://github.com/vinceliuice/Mojave-gtk-theme.git
+    dest: /home/markus/Projekte/Mojave-gtk-theme
+    clone: yes
+
+- name: gnome | appearance | install Mojave theme
+  become: true
+  command: /home/markus/Projekte/Mojave-gtk-theme/install -c dark -o solid -i manjaro -g
+
+- name: gnome | appearance | set theme
+  dconf:
+    key: "'/org/gnome/desktop/interface/gtk-theme'"
+    value: "'Mojave-dark-solid'"
+
+- name: gnome | appearance | set shell theme
+  dconf:
+    key: "/org/gnome/shell/extensions/user-theme/name"
+    value: "'Mojave-dark-solid'"
+
+- name: gnome | appearance |  clone icon repo
+  become_user: markus
+  git:
+    repo: https://github.com/vinceliuice/McMojave-circle.git
+    dest: /home/markus/Projekte/McMojave-circle
+    clone: yes
+
+- name: gnome | appearance | install Mojave icon theme
+  become_user: markus
+  become: true
+  command: /home/markus/Projekte/McMojave-circle/install -grey
+
+- name: gnome | appearance | set icon theme
+  become_user: markus
+  dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "'McMojave-circle-grey-dark'"
+
+- name: gnome | appearance | set cursor theme
+  become_user: markus
+  dconf:
+    key: "/org/gnome/desktop/interface/cursor-theme"
+    value: "'xcursor-breeze-snow'"
+ 
+- name: gnome | appearance | copy wallpaper file
+  copy:
+    src: gnome/wallpaper.jpg
+    dest: /usr/share/backgrounds/markus-wallpaper.jpg
+    owner: root
+    group: root
+    mode: 0644
+ 
+- name: gnome | appearance | set wallpaper
+  become_user: markus
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///usr/share/backgrounds/markus-wallpaper.jpg'"
+
+- name: gnome | appearance | set lock screen background position
+  become_user: markus
+  dconf:
+    key: "/org/gnome/desktop/screensaver/picture-options"
+    value: "'zoom'"
