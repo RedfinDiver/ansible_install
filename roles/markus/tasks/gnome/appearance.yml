@@ -13,16 +13,19 @@
     clone: yes
 
 - name: gnome | appearance | install Mojave theme
+  become_user: markus
   become: true
   command: /home/markus/Projekte/Mojave-gtk-theme/install.sh -c dark -o solid -i manjaro -g
   ignore_errors: yes
 
 - name: gnome | appearance | set theme
+  become_user: markus
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     value: "'Mojave-dark-solid'"
 
 - name: gnome | appearance | set shell theme
+  become_user: markus
   dconf:
     key: "/org/gnome/shell/extensions/user-theme/name"
     value: "'Mojave-dark-solid'"
