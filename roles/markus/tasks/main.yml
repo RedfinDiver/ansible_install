@@ -10,7 +10,7 @@
   - import_tasks: system/ssh.yml
   - import_tasks: system/autofs.yml
   - import_tasks: system/htop.yml
-  #- import_tasks: system/fish.yml
+  - import_tasks: system/fish.yml
 
   # Install and configure Development tools
   #- import_tasks: development/code.yml
