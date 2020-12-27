@@ -1,9 +1,10 @@
 ---
 - name: gnome | appearance | install requirements for theme
   package:
-    - gtk-engine-murrine
-    - gtk-engines
-    - sassc
+    name:
+      - gtk-engine-murrine
+      - gtk-engines
+      - sassc
 
 - name: gnome | appearance | clone Mojave theme repo
   git:
