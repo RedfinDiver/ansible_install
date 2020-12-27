@@ -36,4 +36,4 @@
 - name: fish | set simple-ass-prompt
   become: true
   become_user: markus
-  command: omf install simple-ass-prompt
+  shell: omf install simple-ass-prompt
