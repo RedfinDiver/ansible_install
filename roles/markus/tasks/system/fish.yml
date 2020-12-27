@@ -4,24 +4,19 @@
     name: fish
     state: present
 
-- name: fish | clone oh-my-fish
-  become_user: markus
-  git:
-    repo: https://github.com/oh-my-fish/oh-my-fish.git
-    dest: '/tmp/omf'
-    clone: yes
-
 - name: fish | set shell for user markus
   become: true
   user:
     name: markus
     shell: /usr/bin/fish
 
+- name: fish | clone oh-my-fish
+  git:
+    repo: https://github.com/oh-my-fish/oh-my-fish.git
+    dest: '/tmp/omf'
+    clone: yes
+
 - name: fish | install oh-myfish
   become: true
   become_user: markus
   command: /tmp/omf/bin/install -y --offline --noninteractive
-
-- name: fish | set simple-ass-prompt
-  become_user: markus
-  command: fish -c omf install simple-ass-prompt
