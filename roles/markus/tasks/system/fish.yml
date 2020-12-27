@@ -16,13 +16,23 @@
     clone: yes
   when: not omf.stat.exists
 
-- name: Install oh-my-fish
+- name: fish | Install oh-my-fish
   become: true
   become_user: markus
   command: /tmp/omf/bin/install -y --offline --noninteractive
   when: not omf.stat.exists
 
-- name: Mark oh-my-fish installed with /etc/omf.installed
+- name: fish | Mark oh-my-fish installed with /etc/omf.installed
   file:
     path: /etc/omf.installed
     state: touch
+
+- name: fish | set shell for user markus
+  become: yes
+  user:
+    name: markus
+    shell: fish
+
+- name: fish | set simple-ass-prompt
+  become_user: markus
+  command: omf install simple-ass-prompt
