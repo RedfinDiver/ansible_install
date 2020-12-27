@@ -18,9 +18,9 @@
     - code --install-extension formulahendry.code-runner
     - code --install-extension alefragnani.project-manager
     - code --install-extension Gruntfuggly.todo-tree
-    - code --install-extension nickheap.vscode-ant
+    # - code --install-extension nickheap.vscode-ant
     - code --install-extension ms-azuretools.vscode-docker
     - code --install-extension lextudio.restructuredtext
-    - code --install-extension ziishaned.livereload
-    - code --install-extension skyapps.fish-vscode
+    # - code --install-extension ziishaned.livereload
+    # - code --install-extension skyapps.fish-vscode
     - code --install-extension mikestead.dotenv

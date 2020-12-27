@@ -1,0 +1,19 @@
+---
+- name: gsettings | install requirements for theme
+  package:
+    - gtk-engine-murrine
+    - gtk-engines
+    - sassc
+  state: present
+
+- name: gsettings | clone theme repo
+  git:
+    repo: https://github.com/vinceliuice/Mojave-gtk-theme.git
+    dest: /home/markus/Projekte/Mojave-gtk-theme
+    clone: yes
+
+- name: gsettings | clone icon repo
+  git:
+    repo: https://github.com/vinceliuice/McMojave-circle.git
+    dest: /home/markus/Projekte/McMojave-circle
+    clone: yes
