@@ -19,7 +19,7 @@
 
 - name: fish | install oh-myfish
   become_user: markus
-  shell: cd /home/markus/.local/share/omf/bin/install -y --offline --noninteractive
+  shell: /home/markus/.local/share/omf/bin/install -y --offline --noninteractive
 
 # - name: fish | set simple-ass-prompt
 #   become: true
