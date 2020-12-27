@@ -4,19 +4,19 @@
 
 - block:
   # Make sure users exist on the system
-  - import_tasks: user/markus.yml
+  # - import_tasks: user/markus.yml
 
   # Other system setup stuff
-  - import_tasks: system/ssh.yml
-  - import_tasks: system/autofs.yml
-  - import_tasks: system/htop.yml
-  - import_tasks: system/fish.yml
+  # - import_tasks: system/ssh.yml
+  # - import_tasks: system/autofs.yml
+  # - import_tasks: system/htop.yml
+  # - import_tasks: system/fish.yml
 
   # Install and configure Development tools
   # - import_tasks: development/code.yml
-  - import_tasks: development/docker.yml
-  - import_tasks: development/git.yml
-  - import_tasks: development/python.yml
+  # - import_tasks: development/docker.yml
+  # - import_tasks: development/git.yml
+  # - import_tasks: development/python.yml
 
   # Install and configure other software
   - import_tasks: gnome/appearance.yml
