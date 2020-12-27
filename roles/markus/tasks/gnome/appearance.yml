@@ -4,7 +4,6 @@
     - gtk-engine-murrine
     - gtk-engines
     - sassc
-  state: present
 
 - name: gnome | appearance | clone Mojave theme repo
   git:
