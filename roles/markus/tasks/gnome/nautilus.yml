@@ -1,3 +1,4 @@
+---
 - name: gnome | nautilus | disable tree-view in nautilus
   become_user: markus
   dconf:
