@@ -8,8 +8,8 @@
   become_user: markus
   git:
     repo: https://github.com/oh-my-fish/oh-my-fish.git
-    dest: /home/markus/.local/share/omf
-    update: yes
+    dest: '/tmp/omf'
+    clone: yes
 
 - name: fish | set shell for user markus
   become: true
@@ -18,8 +18,9 @@
     shell: /usr/bin/fish
 
 - name: fish | install oh-myfish
+  become: true
   become_user: markus
-  shell: /home/markus/.local/share/omf/bin/install -y --offline --noninteractive
+  command: /tmp/omf/bin/install -y --offline --noninteractive
 
 # - name: fish | set simple-ass-prompt
 #   become: true
