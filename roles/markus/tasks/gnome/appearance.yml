@@ -81,6 +81,7 @@
     value: "'Noto Sans 10'"
 
 - name: gnome | appearance | set favorite apps
+  become_user: markus
   dconf:
     key: "/org/gnome/shell/favorite-apps"
     value: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'chromium.desktop', 'org.gnome.tweaks.desktop', 'code-oss.desktop', 'com.bitwarden.desktop.desktop', 'webserver.desktop', 'org.gnome.Extensions.desktop']"
