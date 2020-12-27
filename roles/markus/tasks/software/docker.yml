@@ -9,7 +9,7 @@
   user:
     name: markus
     append: yes
-    groups: wheel
+    groups: docker
 
 - name: start docker service
   become: yes
