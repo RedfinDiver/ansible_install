@@ -20,7 +20,7 @@
   become: true
   become_user: markus
   command: /tmp/omf/bin/install -y --offline --noninteractive
-  with_dict: "{{ markus }} - {{ /home/ }}"
+  with_dict: "{{ userlist }}"
   when: not omf.stat.exists
 
 - name: Mark oh-my-fish installed with /etc/omf.installed

@@ -17,3 +17,5 @@
   become: true
   roles:
     - markus
+    userlist:
+      markus: /home/
