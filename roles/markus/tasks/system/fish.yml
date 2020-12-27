@@ -4,28 +4,16 @@
     name: fish
     state: present
 
-- name: fish | Check if oh-my-fish is installed
-  stat:
-    path: '/etc/omf.installed'
-  register: omf
-
 - name: fish | Clone oh-my-fish repo
   git:
     repo: 'https://github.com/oh-my-fish/oh-my-fish'
     dest: '/tmp/omf'
     clone: yes
-  when: not omf.stat.exists
 
 - name: fish | Install oh-my-fish
   become: true
   become_user: markus
   command: /tmp/omf/bin/install -y --offline --noninteractive
-  when: not omf.stat.exists
-
-- name: fish | Mark oh-my-fish installed with /etc/omf.installed
-  file:
-    path: /etc/omf.installed
-    state: touch
 
 - name: fish | set shell for user markus
   become: yes
@@ -33,8 +21,9 @@
     append: yes
     name: markus
     shell: fish
+    groups: nfs,wheel,docker
 
-- name: fish | set simple-ass-prompt
-  become: true
-  become_user: markus
-  shell: omf install simple-ass-prompt
+# - name: fish | set simple-ass-prompt
+#   become: true
+#   become_user: markus
+#   shell: omf install simple-ass-prompt
