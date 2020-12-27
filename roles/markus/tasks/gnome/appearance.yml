@@ -83,5 +83,4 @@
 - name: gnome | appearance | set favorite apps
   dconf:
     key: "/org/gnome/shell/favorite-apps"
-    value: "'['org.gnome.Nautilus.desktop', 'firefox.desktop', 'chromium.desktop', 'org.gnome.tweaks.desktop', 'code-oss.desktop', 'com.bitwarden.desktop.desktop', 'webserver.desktop', 'org.gnome.Extensions.desktop']''"
-    
+    value: "'['org.gnome.Nautilus.desktop', 'firefox.desktop', 'chromium.desktop', 'org.gnome.tweaks.desktop', 'code-oss.desktop', 'com.bitwarden.desktop.desktop', 'webserver.desktop', 'org.gnome.Extensions.desktop']'"
