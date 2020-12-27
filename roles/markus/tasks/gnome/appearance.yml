@@ -18,7 +18,7 @@
 
 - name: gnome | appearance | set theme
   dconf:
-    key: "'/org/gnome/desktop/interface/gtk-theme'"
+    key: "/org/gnome/desktop/interface/gtk-theme"
     value: "'Mojave-dark-solid'"
 
 - name: gnome | appearance | set shell theme
@@ -26,7 +26,7 @@
     key: "/org/gnome/shell/extensions/user-theme/name"
     value: "'Mojave-dark-solid'"
 
-- name: gnome | appearance |  clone icon repo
+- name: gnome | appearance | clone icon repo
   become_user: markus
   git:
     repo: https://github.com/vinceliuice/McMojave-circle.git
