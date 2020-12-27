@@ -17,7 +17,7 @@
   when: not omf.stat.exists
 
 - name: fish | Install oh-my-fish
-  become: yes
+  become: true
   become_user: markus
   command: /tmp/omf/bin/install -y --offline --noninteractive
   when: not omf.stat.exists
@@ -34,6 +34,6 @@
     shell: fish
 
 - name: fish | set simple-ass-prompt
-  become: yes
+  become: true
   become_user: markus
   command: omf install simple-ass-prompt
