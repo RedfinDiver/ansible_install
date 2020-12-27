@@ -1,0 +1,21 @@
+---
+- name: docker | install
+  package:
+    name:
+      - docker
+      - docker-compose
+
+- name: add user markus to docker group
+  user:
+    name: markus
+    groups: docker
+
+- name: start docker service
+  service:
+    name: docker
+    state: started
+
+- name: enable docker service
+  service:
+    name: docker
+    enabled: yes

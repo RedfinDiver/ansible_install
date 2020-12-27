@@ -1,0 +1,8 @@
+---
+- name: python | install
+  package:
+    name: python-pip
+
+- name: python | configure
+  pip:
+    name: pipenv
