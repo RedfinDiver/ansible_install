@@ -1,0 +1,4 @@
+---
+- name: handbrake | install
+  package:
+    name: handbrake

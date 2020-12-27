@@ -2,3 +2,9 @@
 - name: update_xdg
   become_user: markus
   command: /usr/bin/xdg-user-dirs-update
+
+- name: fish | set shell for user markus
+  become: yes
+  user:
+    name: markus
+    shell: fish

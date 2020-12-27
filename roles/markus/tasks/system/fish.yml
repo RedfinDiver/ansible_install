@@ -1,0 +1,12 @@
+---
+- name: fish | install
+  package:
+    name: fish
+
+- name: fish  | install omf and set theme
+  become_user: markus
+  shell: {{ item }}
+  loop:
+    - curl -L https://get.oh-my.fish | fish
+    - omf install simple-ass-prompt
+  notify: set_fish_shell

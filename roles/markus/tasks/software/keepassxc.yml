@@ -1,4 +1,4 @@
+---
 - name: packages | install
   package:
-    name:
-      - htop
+    name: keepassxc

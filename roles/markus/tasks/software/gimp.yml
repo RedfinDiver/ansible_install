@@ -1,0 +1,6 @@
+---
+- name: gimp | install
+  package:
+    name:
+      - gimp
+      - gimp-help-de

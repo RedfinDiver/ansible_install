@@ -1,0 +1,4 @@
+---
+- name: inkscape | install
+  package:
+    name: inkscape
