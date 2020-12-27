@@ -13,8 +13,9 @@
 
 - name: fish | set shell for user markus
   become: true
-  become_user: markus
-  shell: chsh -s /usr/bin/fish markus
+  user:
+    name: markus
+    shell: /usr/bin/fish
 
 - name: fish | install oh-myfish
   become_user: markus
