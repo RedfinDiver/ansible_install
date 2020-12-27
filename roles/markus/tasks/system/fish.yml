@@ -4,7 +4,7 @@
     name: fish
     state: present
 
-- name: fish | Install oh-my-fish
+- name: fish | clone oh-my-fish
   become_user: markus
   git:
     repo: https://github.com/oh-my-fish/oh-my-fish.git
@@ -12,8 +12,13 @@
     update: yes
 
 - name: fish | set shell for user markus
+  become: true
   become_user: markus
   shell: chsh -s /usr/bin/fish markus
+
+- name: fish | install oh-myfish
+  become_user: markus
+  shell: cd /home/markus/.local/share/omf/bin/install -y --offline --noninteractive
 
 # - name: fish | set simple-ass-prompt
 #   become: true
