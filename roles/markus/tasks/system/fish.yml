@@ -24,4 +24,4 @@
 
 - name: fish | set simple-ass-prompt
   become_user: markus
-  shell: fish -c omf install simple-ass-prompt
+  command: fish -c omf install simple-ass-prompt
