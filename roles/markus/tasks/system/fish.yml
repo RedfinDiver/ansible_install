@@ -5,12 +5,14 @@
     state: present
 
 - name: fish | Install oh-my-fish
+  become_user: markus
   git:
     repo: https://github.com/oh-my-fish/oh-my-fish.git
     dest: /home/markus/.local/share/omf
     update: yes
 
 - name: fish | set shell for user markus
+  become_user: markus
   shell: chsh -s /usr/bin/fish markus
 
 # - name: fish | set simple-ass-prompt
