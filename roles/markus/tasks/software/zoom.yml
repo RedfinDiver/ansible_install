@@ -1,6 +1,6 @@
-- name: bitwarden | install package
+- name: zoom | install package
   become_user: markus
   flatpak:
-    name: com.bitwarden.desktop
+    name: flathub us.zoom.Zoom
     method: user
     state: present
