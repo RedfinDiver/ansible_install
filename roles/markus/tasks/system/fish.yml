@@ -22,7 +22,6 @@
   become_user: markus
   command: /tmp/omf/bin/install -y --offline --noninteractive
 
-# - name: fish | set simple-ass-prompt
-#   become: true
-#   become_user: markus
-#   shell: omf install simple-ass-prompt
+- name: fish | set simple-ass-prompt
+  become_user: markus
+  shell: fish -c omf install simple-ass-prompt
