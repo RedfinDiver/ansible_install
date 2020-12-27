@@ -10,7 +10,6 @@
         update_cache: yes
         upgrade: yes
       changed_when: False
-      when: ansible_distribution == "Archlinux"
 
 # run roles
 - hosts: markus
