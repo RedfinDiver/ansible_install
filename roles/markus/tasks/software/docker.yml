@@ -8,14 +8,17 @@
 - name: add user markus to docker group
   user:
     name: markus
-    groups: docker
+    append: yes
+    groups: wheel
 
 - name: start docker service
+  become: yes
   service:
     name: docker
     state: started
 
 - name: enable docker service
+  become: yes
   service:
     name: docker
     enabled: yes
