@@ -19,3 +19,4 @@
   - import_tasks: development/python.yml
 
   # Install and configure other software
+  - import_tasks: gnome/appearance.yml
