@@ -5,7 +5,7 @@
 
 - name: fish  | install omf and set theme
   become_user: markus
-  shell: {{ item }}
+  shell: "{{ item }}"
   loop:
     - curl -L https://get.oh-my.fish | fish
     - omf install simple-ass-prompt
