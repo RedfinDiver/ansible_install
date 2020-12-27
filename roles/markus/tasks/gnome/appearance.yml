@@ -85,3 +85,39 @@
   dconf:
     key: "/org/gnome/shell/favorite-apps"
     value: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'chromium.desktop', 'org.gnome.tweaks.desktop', 'code-oss.desktop', 'com.bitwarden.desktop.desktop', 'webserver.desktop', 'org.gnome.Extensions.desktop']"
+
+- name: gnome | appearance | dash to dock-to-dock bottom
+  become_user: markus
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/dock-position"
+    value: "'BOTTOM'"
+
+- name: gnome | appearance | dash to dock-to-dock height-fraction
+  become_user: markus
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/height-fraction"
+    value: "0.9"
+
+- name: gnome | appearance | dash to dock-to-dock extend-height
+  become_user: markus
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/extend-height"
+    value: "false"
+
+- name: gnome | appearance | dash to dock-to-dock multi-monitor
+  become_user: markus
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/multi-monitor"
+    value: "true"
+
+- name: gnome | appearance | dash to dock-to-dock dash-max-icon-size
+  become_user: markus
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size"
+    value: "48"
+
+- name: gnome | appearance | dash to dock-to-dock apply-custom-theme
+  become_user: markus
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/apply-custom-theme"
+    value: "true"
