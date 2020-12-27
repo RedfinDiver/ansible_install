@@ -11,4 +11,7 @@
   - import_tasks: system/autofs.yml
 
   # Install Software Tools
-  - import_tasks: software/code.yml
+  #- import_tasks: software/code.yml
+  - import_tasks: software/docker.yml
+  - import_tasks: software/git.yml
+  - import_tasks: software/python.yml
