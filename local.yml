@@ -2,6 +2,7 @@
 - hosts: all
   tags: always
   become: true
+  gather_facts: no
   pre_tasks:
     - name: update repos
       tags: always
