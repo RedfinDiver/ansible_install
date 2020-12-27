@@ -14,7 +14,7 @@
 
 - name: gnome | appearance | install Mojave theme
   become: true
-  command: /home/markus/Projekte/Mojave-gtk-theme/install.sh -c dark -o solid -i manjaro -g
+  shell: /home/markus/Projekte/Mojave-gtk-theme/install.sh -c dark -o solid -i manjaro -g > /dev/null 2>&1
 
 - name: gnome | appearance | set theme
   dconf:
