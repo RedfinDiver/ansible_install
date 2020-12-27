@@ -13,7 +13,7 @@
   - import_tasks: system/fish.yml
 
   # Install and configure Development tools
-  - import_tasks: development/code.yml
+  # - import_tasks: development/code.yml
   - import_tasks: development/docker.yml
   - import_tasks: development/git.yml
   - import_tasks: development/python.yml
