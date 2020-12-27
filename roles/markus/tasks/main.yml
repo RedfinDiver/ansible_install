@@ -20,3 +20,5 @@
 
   # Install and configure other software
   - import_tasks: gnome/appearance.yml
+  - import_tasks: gnome/keybindings.yml
+
