@@ -1,0 +1,6 @@
+---
+- name: uninstalling not needed software
+  package:
+    name:
+      - epiphany
+    state: absent

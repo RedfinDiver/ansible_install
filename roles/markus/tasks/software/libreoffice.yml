@@ -1,0 +1,8 @@
+---
+- name: libreoffice | install
+  package:
+    name: libreoffice-still
+
+- name: libreoffice-de  | install
+  package:
+    name: libreoffice-still-de

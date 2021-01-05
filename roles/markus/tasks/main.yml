@@ -32,3 +32,5 @@
   - import_tasks: software/inkscape.yml
   - import_tasks: software/keepassxc.yml
   - import_tasks: software/synology.yml
+  - import_tasks: software/libreoffice.yml
+  - import_tasks: software/uninstall.yml

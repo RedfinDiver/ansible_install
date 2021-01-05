@@ -4,6 +4,11 @@
     name: flatpak
     state: present
 
+- name: pamac-flatpak-plugin | install
+  package:
+    name: pamac-flatpak-plugin
+    state: present
+
 - name: flatpak | add flathub remote
   become_user: markus
   flatpak_remote:
