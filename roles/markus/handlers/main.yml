@@ -3,28 +3,28 @@
   become_user: markus
   command: /usr/bin/xdg-user-dirs-update
 
-- name: start docker service
+- name: start_docker
   become: yes
   service:
     name: docker
     state: started
   ignore_errors: yes
 
-- name: enable docker service
+- name: enable_docker
   become: yes
   service:
     name: docker
     enabled: yes
   ignore_errors: yes
 
-- name: start cups service
+- name: start_cups
   become: yes
   service:
     name: cups
     state: started
   ignore_errors: yes
 
-- name: enable cups service
+- name: enable_cups
   become: yes
   service:
     name: cups
