@@ -1,0 +1,14 @@
+- name: printer | cups | install
+  package:
+    name: cups
+    state: present
+
+- name: printer | sane | install
+  package:
+    name: sane
+    state: present
+
+- name: printer | hplip | install
+  package:
+    name: hplip
+    state: present
