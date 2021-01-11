@@ -1,5 +1,5 @@
 - name: zoom | install package
   become_user: markus
   flatpak:
-    name: flathub us.zoom.Zoom
+    name: us.zoom.Zoom
     state: present
