@@ -1,14 +1,11 @@
 - name: printer | cups | install
   package:
-    name: cups
+    name:
+      - cups
+      - sane
+      - hplip
+      - simple-scan
     state: present
-
-- name: printer | sane | install
-  package:
-    name: sane
-    state: present
-
-- name: printer | hplip | install
-  package:
-    name: hplip
-    state: present
+  notify:
+  - start_cups
+  - enable_cups

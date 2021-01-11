@@ -10,17 +10,6 @@
     name: markus
     append: yes
     groups: docker
-
-- name: start docker service
-  become: yes
-  service:
-    name: docker
-    state: started
-  ignore_errors: yes
-
-- name: enable docker service
-  become: yes
-  service:
-    name: docker
-    enabled: yes
-  ignore_errors: yes
+  notify:
+    - start_docker
+    - enable_docker

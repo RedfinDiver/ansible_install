@@ -33,4 +33,5 @@
   - import_tasks: software/keepassxc.yml
   - import_tasks: software/synology.yml
   - import_tasks: software/libreoffice.yml
+  - import_tasks: software/printer.yml
   - import_tasks: software/uninstall.yml
