@@ -1,0 +1,5 @@
+---
+- name: calibre| install
+  package:
+    name:
+      - calibre
